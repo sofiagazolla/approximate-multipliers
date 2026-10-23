@@ -1,0 +1,29 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 125C Model Setup 'virtual_io'
+Slack : 84.970
+TNS   : 0.000
+
+Type  : Slow 1200mV 125C Model Hold 'virtual_io'
+Slack : 8.430
+TNS   : 0.000
+
+Type  : Slow 1200mV -40C Model Setup 'virtual_io'
+Slack : 87.696
+TNS   : 0.000
+
+Type  : Slow 1200mV -40C Model Hold 'virtual_io'
+Slack : 6.965
+TNS   : 0.000
+
+Type  : Fast 1200mV -40C Model Setup 'virtual_io'
+Slack : 93.821
+TNS   : 0.000
+
+Type  : Fast 1200mV -40C Model Hold 'virtual_io'
+Slack : 3.391
+TNS   : 0.000
+
+------------------------------------------------------------

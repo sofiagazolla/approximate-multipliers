@@ -1,0 +1,180 @@
+Flow report for multiplier_operator
+Fri Oct 23 11:54:56 2026
+Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2025  Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Altera and sold by Altera or its authorized distributors.  Please
+refer to the Altera Software License Subscription Agreements 
+on the Quartus Prime software download page.
+
+
+
++--------------------------------------------------------------------------------------+
+; Flow Summary                                                                         ;
++------------------------------------+-------------------------------------------------+
+; Flow Status                        ; Successful - Fri Oct 23 11:54:56 2026           ;
+; Quartus Prime Version              ; 24.1std.0 Build 1077 03/04/2025 SC Lite Edition ;
+; Revision Name                      ; multiplier_operator                             ;
+; Top-level Entity Name              ; multiplier_operator                             ;
+; Family                             ; MAX 10                                          ;
+; Device                             ; 10M02SCE144A7G                                  ;
+; Timing Models                      ; Final                                           ;
+; Total logic elements               ; 1 / 2,304 ( < 1 % )                             ;
+;     Total combinational functions  ; 1 / 2,304 ( < 1 % )                             ;
+;     Dedicated logic registers      ; 0 / 2,304 ( 0 % )                               ;
+; Total registers                    ; 0                                               ;
+; Total pins                         ; 32 / 101 ( 32 % )                               ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0 / 110,592 ( 0 % )                             ;
+; Embedded Multiplier 9-bit elements ; 1 / 32 ( 3 % )                                  ;
+; Total PLLs                         ; 0 / 1 ( 0 % )                                   ;
+; UFM blocks                         ; 0 / 1 ( 0 % )                                   ;
+; ADC blocks                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 10/23/2026 11:54:39 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; multiplier_operator ;
++-------------------+---------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                ;
++--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
+; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
++--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
+; COMPILER_SIGNATURE_ID                ; 220606299081173.179276727907588        ; --            ; --          ; --                                ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; axc_esposito_testbench            ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; axc_majority_testbench            ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; axc_testbench                     ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; exact_compressor_testbench        ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; ha_testbench                      ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; fa_testbench                      ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; multiplier_tb                     ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; multiplier_testbench              ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; axc_zhang_testbench               ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_symbol           ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; multiplier_testbench                   ; --            ; --          ; eda_simulation                    ;
+; EDA_OUTPUT_DATA_FORMAT               ; Vhdl                                   ; --            ; --          ; eda_simulation                    ;
+; EDA_SIMULATION_TOOL                  ; Questa Intel FPGA (VHDL)               ; <None>        ; --          ; --                                ;
+; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                        ; --            ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_FILE                  ; axc_esposito_testbench.vhd             ; --            ; --          ; axc_esposito_testbench            ;
+; EDA_TEST_BENCH_FILE                  ; axc_majority_testbench.vhd             ; --            ; --          ; axc_majority_testbench            ;
+; EDA_TEST_BENCH_FILE                  ; axc_testbench.vhd                      ; --            ; --          ; axc_testbench                     ;
+; EDA_TEST_BENCH_FILE                  ; exact_compressor_testbench.vhd         ; --            ; --          ; exact_compressor_testbench        ;
+; EDA_TEST_BENCH_FILE                  ; ha_testbench.vhd                       ; --            ; --          ; ha_testbench                      ;
+; EDA_TEST_BENCH_FILE                  ; fa_testbench.vhd                       ; --            ; --          ; fa_testbench                      ;
+; EDA_TEST_BENCH_FILE                  ; testbench.vhd                          ; --            ; --          ; multiplier_tb                     ;
+; EDA_TEST_BENCH_FILE                  ; multiplier_testbench.vhd               ; --            ; --          ; multiplier_testbench              ;
+; EDA_TEST_BENCH_FILE                  ; axc_zhang_testbench.vhd                ; --            ; --          ; axc_zhang_testbench               ;
+; EDA_TEST_BENCH_MODULE_NAME           ; axc_esposito_testbench                 ; --            ; --          ; axc_esposito_testbench            ;
+; EDA_TEST_BENCH_MODULE_NAME           ; axc_majority_testbench                 ; --            ; --          ; axc_majority_testbench            ;
+; EDA_TEST_BENCH_MODULE_NAME           ; axc_testbench                          ; --            ; --          ; axc_testbench                     ;
+; EDA_TEST_BENCH_MODULE_NAME           ; exact_compressor_testbench             ; --            ; --          ; exact_compressor_testbench        ;
+; EDA_TEST_BENCH_MODULE_NAME           ; ha_testbench                           ; --            ; --          ; ha_testbench                      ;
+; EDA_TEST_BENCH_MODULE_NAME           ; fa_testbench                           ; --            ; --          ; fa_testbench                      ;
+; EDA_TEST_BENCH_MODULE_NAME           ; testbench                              ; --            ; --          ; multiplier_tb                     ;
+; EDA_TEST_BENCH_MODULE_NAME           ; multiplier_testbench                   ; --            ; --          ; multiplier_testbench              ;
+; EDA_TEST_BENCH_MODULE_NAME           ; axc_zhang_testbench                    ; --            ; --          ; axc_zhang_testbench               ;
+; EDA_TEST_BENCH_NAME                  ; multiplier_tb                          ; --            ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; fa_testbench                           ; --            ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; ha_testbench                           ; --            ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; axc_testbench                          ; --            ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; axc_esposito_testbench                 ; --            ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; multiplier_testbench                   ; --            ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; axc_zhang_testbench                    ; --            ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; axc_majority_testbench                 ; --            ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; exact_compressor_testbench             ; --            ; --          ; eda_simulation                    ;
+; EDA_TIME_SCALE                       ; 1 ps                                   ; --            ; --          ; eda_simulation                    ;
+; FLOW_ENABLE_POWER_ANALYZER           ; On                                     ; Off           ; --          ; --                                ;
+; MAX_CORE_JUNCTION_TEMP               ; 125                                    ; --            ; --          ; --                                ;
+; MIN_CORE_JUNCTION_TEMP               ; -40                                    ; --            ; --          ; --                                ;
+; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; --          ; Top                               ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; --          ; Top                               ;
+; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; --          ; Top                               ;
+; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                    ; --            ; --          ; --                                ;
+; POWER_DEFAULT_INPUT_IO_TOGGLE_RATE   ; 12.5 %                                 ; 12.5%         ; --          ; --                                ;
+; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --                                ;
+; PROJECT_OUTPUT_DIRECTORY             ; output_files                           ; --            ; --          ; --                                ;
++--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:00:07     ; 1.0                     ; 423 MB              ; 00:00:16                           ;
+; Fitter               ; 00:00:02     ; 1.2                     ; 1366 MB             ; 00:00:03                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 333 MB              ; 00:00:00                           ;
+; Power Analyzer       ; 00:00:01     ; 1.2                     ; 822 MB              ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:01     ; 1.2                     ; 526 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 579 MB              ; 00:00:00                           ;
+; Total                ; 00:00:13     ; --                      ; --                  ; 00:00:21                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++---------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                             ;
++----------------------+------------------------------+---------+------------+----------------+
+; Module Name          ; Machine Hostname             ; OS Name ; OS Version ; Processor type ;
++----------------------+------------------------------+---------+------------+----------------+
+; Analysis & Synthesis ; sofigazolla-Inspiron-15-3520 ; Ubuntu  ; 20         ; x86_64         ;
+; Fitter               ; sofigazolla-Inspiron-15-3520 ; Ubuntu  ; 20         ; x86_64         ;
+; Assembler            ; sofigazolla-Inspiron-15-3520 ; Ubuntu  ; 20         ; x86_64         ;
+; Power Analyzer       ; sofigazolla-Inspiron-15-3520 ; Ubuntu  ; 20         ; x86_64         ;
+; Timing Analyzer      ; sofigazolla-Inspiron-15-3520 ; Ubuntu  ; 20         ; x86_64         ;
+; EDA Netlist Writer   ; sofigazolla-Inspiron-15-3520 ; Ubuntu  ; 20         ; x86_64         ;
++----------------------+------------------------------+---------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off multipliers -c multiplier_operator
+quartus_fit --read_settings_files=off --write_settings_files=off multipliers -c multiplier_operator
+quartus_asm --read_settings_files=off --write_settings_files=off multipliers -c multiplier_operator
+quartus_pow --read_settings_files=off --write_settings_files=off multipliers -c multiplier_operator
+quartus_sta multipliers -c multiplier_operator
+quartus_eda --read_settings_files=off --write_settings_files=off multipliers -c multiplier_operator
+
+
+

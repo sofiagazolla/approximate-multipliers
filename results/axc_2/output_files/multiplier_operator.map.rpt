@@ -1,0 +1,419 @@
+Analysis & Synthesis report for multiplier_operator
+Fri Oct 23 12:05:18 2026
+Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Port Connectivity Checks: "exact_compressor:SECOND_EXACT_1"
+ 10. Port Connectivity Checks: "exact_compressor:EXACT73"
+ 11. Post-Synthesis Netlist Statistics for Top Partition
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2025  Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Altera and sold by Altera or its authorized distributors.  Please
+refer to the Altera Software License Subscription Agreements 
+on the Quartus Prime software download page.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri Oct 23 12:05:18 2026           ;
+; Quartus Prime Version              ; 24.1std.0 Build 1077 03/04/2025 SC Lite Edition ;
+; Revision Name                      ; multiplier_operator                             ;
+; Top-level Entity Name              ; multiplier_operator_axc_2                       ;
+; Family                             ; MAX 10                                          ;
+; Total logic elements               ; 41                                              ;
+;     Total combinational functions  ; 41                                              ;
+;     Dedicated logic registers      ; 0                                               ;
+; Total registers                    ; 0                                               ;
+; Total pins                         ; 32                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
+; UFM blocks                         ; 0                                               ;
+; ADC blocks                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                      ;
++------------------------------------------------------------------+---------------------------+---------------------+
+; Option                                                           ; Setting                   ; Default Value       ;
++------------------------------------------------------------------+---------------------------+---------------------+
+; Device                                                           ; 10M02SCE144A7G            ;                     ;
+; Top-level entity name                                            ; multiplier_operator_axc_2 ; multiplier_operator ;
+; Family name                                                      ; MAX 10                    ; Cyclone V           ;
+; Use smart compilation                                            ; Off                       ; Off                 ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                        ; On                  ;
+; Enable compact report table                                      ; Off                       ; Off                 ;
+; Restructure Multiplexers                                         ; Auto                      ; Auto                ;
+; Create Debugging Nodes for IP Cores                              ; Off                       ; Off                 ;
+; Preserve fewer node names                                        ; On                        ; On                  ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable                    ; Enable              ;
+; Verilog Version                                                  ; Verilog_2001              ; Verilog_2001        ;
+; VHDL Version                                                     ; VHDL_1993                 ; VHDL_1993           ;
+; State Machine Processing                                         ; Auto                      ; Auto                ;
+; Safe State Machine                                               ; Off                       ; Off                 ;
+; Extract Verilog State Machines                                   ; On                        ; On                  ;
+; Extract VHDL State Machines                                      ; On                        ; On                  ;
+; Ignore Verilog initial constructs                                ; Off                       ; Off                 ;
+; Iteration limit for constant Verilog loops                       ; 5000                      ; 5000                ;
+; Iteration limit for non-constant Verilog loops                   ; 250                       ; 250                 ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                        ; On                  ;
+; Infer RAMs from Raw Logic                                        ; On                        ; On                  ;
+; Parallel Synthesis                                               ; On                        ; On                  ;
+; DSP Block Balancing                                              ; Auto                      ; Auto                ;
+; NOT Gate Push-Back                                               ; On                        ; On                  ;
+; Power-Up Don't Care                                              ; On                        ; On                  ;
+; Remove Redundant Logic Cells                                     ; Off                       ; Off                 ;
+; Remove Duplicate Registers                                       ; On                        ; On                  ;
+; Ignore CARRY Buffers                                             ; Off                       ; Off                 ;
+; Ignore CASCADE Buffers                                           ; Off                       ; Off                 ;
+; Ignore GLOBAL Buffers                                            ; Off                       ; Off                 ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                       ; Off                 ;
+; Ignore LCELL Buffers                                             ; Off                       ; Off                 ;
+; Ignore SOFT Buffers                                              ; On                        ; On                  ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                       ; Off                 ;
+; Optimization Technique                                           ; Balanced                  ; Balanced            ;
+; Carry Chain Length                                               ; 70                        ; 70                  ;
+; Auto Carry Chains                                                ; On                        ; On                  ;
+; Auto Open-Drain Pins                                             ; On                        ; On                  ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                       ; Off                 ;
+; Auto ROM Replacement                                             ; On                        ; On                  ;
+; Auto RAM Replacement                                             ; On                        ; On                  ;
+; Auto DSP Block Replacement                                       ; On                        ; On                  ;
+; Auto Shift Register Replacement                                  ; Auto                      ; Auto                ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto                      ; Auto                ;
+; Auto Clock Enable Replacement                                    ; On                        ; On                  ;
+; Strict RAM Replacement                                           ; Off                       ; Off                 ;
+; Allow Synchronous Control Signals                                ; On                        ; On                  ;
+; Force Use of Synchronous Clear Signals                           ; Off                       ; Off                 ;
+; Auto RAM Block Balancing                                         ; On                        ; On                  ;
+; Auto RAM to Logic Cell Conversion                                ; Off                       ; Off                 ;
+; Auto Resource Sharing                                            ; Off                       ; Off                 ;
+; Allow Any RAM Size For Recognition                               ; Off                       ; Off                 ;
+; Allow Any ROM Size For Recognition                               ; Off                       ; Off                 ;
+; Allow Any Shift Register Size For Recognition                    ; Off                       ; Off                 ;
+; Use LogicLock Constraints during Resource Balancing              ; On                        ; On                  ;
+; Ignore translate_off and synthesis_off directives                ; Off                       ; Off                 ;
+; Timing-Driven Synthesis                                          ; On                        ; On                  ;
+; Report Parameter Settings                                        ; On                        ; On                  ;
+; Report Source Assignments                                        ; On                        ; On                  ;
+; Report Connectivity Checks                                       ; On                        ; On                  ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                       ; Off                 ;
+; Synchronization Register Chain Length                            ; 2                         ; 2                   ;
+; Power Optimization During Synthesis                              ; Normal compilation        ; Normal compilation  ;
+; HDL message level                                                ; Level2                    ; Level2              ;
+; Suppress Register Optimization Related Messages                  ; Off                       ; Off                 ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000                      ; 5000                ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000                      ; 5000                ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                       ; 100                 ;
+; Clock MUX Protection                                             ; On                        ; On                  ;
+; Auto Gated Clock Conversion                                      ; Off                       ; Off                 ;
+; Block Design Naming                                              ; Auto                      ; Auto                ;
+; SDC constraint protection                                        ; Off                       ; Off                 ;
+; Synthesis Effort                                                 ; Auto                      ; Auto                ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                        ; On                  ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                       ; Off                 ;
+; Analysis & Synthesis Message Level                               ; Medium                    ; Medium              ;
+; Disable Register Merging Across Hierarchies                      ; Auto                      ; Auto                ;
+; Resource Aware Inference For Block RAM                           ; On                        ; On                  ;
++------------------------------------------------------------------+---------------------------+---------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 10          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 10          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-10        ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                           ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                    ; Library ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------+---------+
+; fa_pratice.vhd                   ; yes             ; User VHDL File  ; /home/sofigazolla/ecl/multipliers/fa_pratice.vhd                ;         ;
+; half_adder.vhd                   ; yes             ; User VHDL File  ; /home/sofigazolla/ecl/multipliers/half_adder.vhd                ;         ;
+; exact_compressor.vhd             ; yes             ; User VHDL File  ; /home/sofigazolla/ecl/multipliers/exact_compressor.vhd          ;         ;
+; axc_2.vhd                        ; yes             ; User VHDL File  ; /home/sofigazolla/ecl/multipliers/axc_2.vhd                     ;         ;
+; multiplier_operator_axc_2.vhd    ; yes             ; User VHDL File  ; /home/sofigazolla/ecl/multipliers/multiplier_operator_axc_2.vhd ;         ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------+---------+
+
+
++----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary              ;
++---------------------------------------------+------------+
+; Resource                                    ; Usage      ;
++---------------------------------------------+------------+
+; Estimated Total logic elements              ; 41         ;
+;                                             ;            ;
+; Total combinational functions               ; 41         ;
+; Logic element usage by number of LUT inputs ;            ;
+;     -- 4 input functions                    ; 30         ;
+;     -- 3 input functions                    ; 0          ;
+;     -- <=2 input functions                  ; 11         ;
+;                                             ;            ;
+; Logic elements by mode                      ;            ;
+;     -- normal mode                          ; 41         ;
+;     -- arithmetic mode                      ; 0          ;
+;                                             ;            ;
+; Total registers                             ; 0          ;
+;     -- Dedicated logic registers            ; 0          ;
+;     -- I/O registers                        ; 0          ;
+;                                             ;            ;
+; I/O pins                                    ; 32         ;
+;                                             ;            ;
+; Embedded Multiplier 9-bit elements          ; 0          ;
+;                                             ;            ;
+; Maximum fan-out node                        ; a[7]~input ;
+; Maximum fan-out                             ; 13         ;
+; Total fan-out                               ; 182        ;
+; Average fan-out                             ; 1.73       ;
++---------------------------------------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                               ;
++--------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------+---------------------------+--------------+
+; Compilation Hierarchy Node           ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                        ; Entity Name               ; Library Name ;
++--------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------+---------------------------+--------------+
+; |multiplier_operator_axc_2           ; 41 (11)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 32   ; 0            ; 0          ; |multiplier_operator_axc_2                                 ; multiplier_operator_axc_2 ; work         ;
+;    |exact_compressor:EXACT73|        ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |multiplier_operator_axc_2|exact_compressor:EXACT73        ; exact_compressor          ; work         ;
+;    |exact_compressor:SECOND_EXACT_1| ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |multiplier_operator_axc_2|exact_compressor:SECOND_EXACT_1 ; exact_compressor          ; work         ;
+;    |exact_compressor:SECOND_EXACT_2| ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |multiplier_operator_axc_2|exact_compressor:SECOND_EXACT_2 ; exact_compressor          ; work         ;
+;    |exact_compressor:SECOND_EXACT_3| ; 5 (5)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |multiplier_operator_axc_2|exact_compressor:SECOND_EXACT_3 ; exact_compressor          ; work         ;
+;    |fa_practice:FA74|                ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |multiplier_operator_axc_2|fa_practice:FA74                ; fa_practice               ; work         ;
+;    |fa_practice:RESULT_FA_6|         ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |multiplier_operator_axc_2|fa_practice:RESULT_FA_6         ; fa_practice               ; work         ;
+;    |fa_practice:RESULT_FA_7|         ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |multiplier_operator_axc_2|fa_practice:RESULT_FA_7         ; fa_practice               ; work         ;
+;    |fa_practice:RESULT_FA_8|         ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |multiplier_operator_axc_2|fa_practice:RESULT_FA_8         ; fa_practice               ; work         ;
+;    |fa_practice:RESULT_FA_9|         ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |multiplier_operator_axc_2|fa_practice:RESULT_FA_9         ; fa_practice               ; work         ;
+;    |fa_practice:SECOND_FA|           ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |multiplier_operator_axc_2|fa_practice:SECOND_FA           ; fa_practice               ; work         ;
+;    |half_adder:HA40|                 ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |multiplier_operator_axc_2|half_adder:HA40                 ; half_adder                ; work         ;
++--------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------+---------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "exact_compressor:SECOND_EXACT_1" ;
++------+-------+----------+-----------------------------------+
+; Port ; Type  ; Severity ; Details                           ;
++------+-------+----------+-----------------------------------+
+; cin  ; Input ; Info     ; Stuck at GND                      ;
++------+-------+----------+-----------------------------------+
+
+
++------------------------------------------------------+
+; Port Connectivity Checks: "exact_compressor:EXACT73" ;
++------+-------+----------+----------------------------+
+; Port ; Type  ; Severity ; Details                    ;
++------+-------+----------+----------------------------+
+; cin  ; Input ; Info     ; Stuck at GND               ;
++------+-------+----------+----------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 32                          ;
+; cycloneiii_lcell_comb ; 45                          ;
+;     normal            ; 45                          ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 11                          ;
+;         4 data inputs ; 30                          ;
+;                       ;                             ;
+; Max LUT depth         ; 7.00                        ;
+; Average LUT depth     ; 5.81                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
+    Info: Processing started: Fri Oct 23 12:05:12 2026
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off multipliers -c multiplier_operator
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file multiplier_operator.vhd
+    Info (12022): Found design unit 1: multiplier_operator-rtl File: /home/sofigazolla/ecl/multipliers/multiplier_operator.vhd Line: 13
+    Info (12023): Found entity 1: multiplier_operator File: /home/sofigazolla/ecl/multipliers/multiplier_operator.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file fa_theory.vhd
+    Info (12022): Found design unit 1: fa_theory-rtl File: /home/sofigazolla/ecl/multipliers/fa_theory.vhd Line: 11
+    Info (12023): Found entity 1: fa_theory File: /home/sofigazolla/ecl/multipliers/fa_theory.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file fa_pratice.vhd
+    Info (12022): Found design unit 1: fa_practice-rtl File: /home/sofigazolla/ecl/multipliers/fa_pratice.vhd Line: 11
+    Info (12023): Found entity 1: fa_practice File: /home/sofigazolla/ecl/multipliers/fa_pratice.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file half_adder.vhd
+    Info (12022): Found design unit 1: half_adder-rtl File: /home/sofigazolla/ecl/multipliers/half_adder.vhd Line: 11
+    Info (12023): Found entity 1: half_adder File: /home/sofigazolla/ecl/multipliers/half_adder.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file exact_compressor.vhd
+    Info (12022): Found design unit 1: exact_compressor-rtl File: /home/sofigazolla/ecl/multipliers/exact_compressor.vhd Line: 11
+    Info (12023): Found entity 1: exact_compressor File: /home/sofigazolla/ecl/multipliers/exact_compressor.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file axc_1.vhd
+    Info (12022): Found design unit 1: axc_1-rtl File: /home/sofigazolla/ecl/multipliers/axc_1.vhd Line: 11
+    Info (12023): Found entity 1: axc_1 File: /home/sofigazolla/ecl/multipliers/axc_1.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file axc_2.vhd
+    Info (12022): Found design unit 1: axc_2-rtl File: /home/sofigazolla/ecl/multipliers/axc_2.vhd Line: 11
+    Info (12023): Found entity 1: axc_2 File: /home/sofigazolla/ecl/multipliers/axc_2.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file fa_testbench.vhd
+    Info (12022): Found design unit 1: fa_testbench-tb File: /home/sofigazolla/ecl/multipliers/fa_testbench.vhd Line: 7
+    Info (12023): Found entity 1: fa_testbench File: /home/sofigazolla/ecl/multipliers/fa_testbench.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file ha_testbench.vhd
+    Info (12022): Found design unit 1: ha_testbench-tb File: /home/sofigazolla/ecl/multipliers/ha_testbench.vhd Line: 7
+    Info (12023): Found entity 1: ha_testbench File: /home/sofigazolla/ecl/multipliers/ha_testbench.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file axc_testbench.vhd
+    Info (12022): Found design unit 1: axc_testbench-tb File: /home/sofigazolla/ecl/multipliers/axc_testbench.vhd Line: 7
+    Info (12023): Found entity 1: axc_testbench File: /home/sofigazolla/ecl/multipliers/axc_testbench.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file axc_esposito.vhd
+    Info (12022): Found design unit 1: axc_esposito-rtl File: /home/sofigazolla/ecl/multipliers/axc_esposito.vhd Line: 11
+    Info (12023): Found entity 1: axc_esposito File: /home/sofigazolla/ecl/multipliers/axc_esposito.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file axc_zhang.vhd
+    Info (12022): Found design unit 1: axc_zhang-rtl File: /home/sofigazolla/ecl/multipliers/axc_zhang.vhd Line: 11
+    Info (12023): Found entity 1: axc_zhang File: /home/sofigazolla/ecl/multipliers/axc_zhang.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file axc_majority.vhd
+    Info (12022): Found design unit 1: axc_majority-rtl File: /home/sofigazolla/ecl/multipliers/axc_majority.vhd Line: 11
+    Info (12023): Found entity 1: axc_majority File: /home/sofigazolla/ecl/multipliers/axc_majority.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file axc_esposito_testbench.vhd
+    Info (12022): Found design unit 1: axc_esposito_testbench-tb File: /home/sofigazolla/ecl/multipliers/axc_esposito_testbench.vhd Line: 7
+    Info (12023): Found entity 1: axc_esposito_testbench File: /home/sofigazolla/ecl/multipliers/axc_esposito_testbench.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file multiplier_operator_axc.vhd
+    Info (12022): Found design unit 1: multiplier_operator_axc-rtl File: /home/sofigazolla/ecl/multipliers/multiplier_operator_axc.vhd Line: 13
+    Info (12023): Found entity 1: multiplier_operator_axc File: /home/sofigazolla/ecl/multipliers/multiplier_operator_axc.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file multiplier_testbench.vhd
+    Info (12022): Found design unit 1: multiplier_testbench-tb File: /home/sofigazolla/ecl/multipliers/multiplier_testbench.vhd Line: 8
+    Info (12023): Found entity 1: multiplier_testbench File: /home/sofigazolla/ecl/multipliers/multiplier_testbench.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file axc_zhang_testbench.vhd
+    Info (12022): Found design unit 1: axc_zhang_testbench-tb File: /home/sofigazolla/ecl/multipliers/axc_zhang_testbench.vhd Line: 7
+    Info (12023): Found entity 1: axc_zhang_testbench File: /home/sofigazolla/ecl/multipliers/axc_zhang_testbench.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file axc_majority_testbench.vhd
+    Info (12022): Found design unit 1: axc_majority_testbench-tb File: /home/sofigazolla/ecl/multipliers/axc_majority_testbench.vhd Line: 7
+    Info (12023): Found entity 1: axc_majority_testbench File: /home/sofigazolla/ecl/multipliers/axc_majority_testbench.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file multiplier_operator_exact.vhd
+    Info (12022): Found design unit 1: multiplier_operator_exact-rtl File: /home/sofigazolla/ecl/multipliers/multiplier_operator_exact.vhd Line: 13
+    Info (12023): Found entity 1: multiplier_operator_exact File: /home/sofigazolla/ecl/multipliers/multiplier_operator_exact.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file exact_compressor_testbench.vhd
+    Info (12022): Found design unit 1: exact_compressor_testbench-tb File: /home/sofigazolla/ecl/multipliers/exact_compressor_testbench.vhd Line: 7
+    Info (12023): Found entity 1: exact_compressor_testbench File: /home/sofigazolla/ecl/multipliers/exact_compressor_testbench.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file multiplier_operator_axc_2.vhd
+    Info (12022): Found design unit 1: multiplier_operator_axc_2-rtl File: /home/sofigazolla/ecl/multipliers/multiplier_operator_axc_2.vhd Line: 13
+    Info (12023): Found entity 1: multiplier_operator_axc_2 File: /home/sofigazolla/ecl/multipliers/multiplier_operator_axc_2.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file multiplier_operator_axc_esposito.vhd
+    Info (12022): Found design unit 1: multiplier_operator_axc_esposito-rtl File: /home/sofigazolla/ecl/multipliers/multiplier_operator_axc_esposito.vhd Line: 13
+    Info (12023): Found entity 1: multiplier_operator_axc_esposito File: /home/sofigazolla/ecl/multipliers/multiplier_operator_axc_esposito.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file multiplier_operator_axc_zhang.vhd
+    Info (12022): Found design unit 1: multiplier_operator_axc_zhang-rtl File: /home/sofigazolla/ecl/multipliers/multiplier_operator_axc_zhang.vhd Line: 13
+    Info (12023): Found entity 1: multiplier_operator_axc_zhang File: /home/sofigazolla/ecl/multipliers/multiplier_operator_axc_zhang.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file multiplier_operator_axc_majority.vhd
+    Info (12022): Found design unit 1: multiplier_operator_axc_majority-rtl File: /home/sofigazolla/ecl/multipliers/multiplier_operator_axc_majority.vhd Line: 13
+    Info (12023): Found entity 1: multiplier_operator_axc_majority File: /home/sofigazolla/ecl/multipliers/multiplier_operator_axc_majority.vhd Line: 5
+Info (12127): Elaborating entity "multiplier_operator_axc_2" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at multiplier_operator_axc_2.vhd(16): object "a0b0" assigned a value but never read File: /home/sofigazolla/ecl/multipliers/multiplier_operator_axc_2.vhd Line: 16
+Warning (10036): Verilog HDL or VHDL warning at multiplier_operator_axc_2.vhd(16): object "a1b0" assigned a value but never read File: /home/sofigazolla/ecl/multipliers/multiplier_operator_axc_2.vhd Line: 16
+Warning (10036): Verilog HDL or VHDL warning at multiplier_operator_axc_2.vhd(16): object "a2b0" assigned a value but never read File: /home/sofigazolla/ecl/multipliers/multiplier_operator_axc_2.vhd Line: 16
+Warning (10036): Verilog HDL or VHDL warning at multiplier_operator_axc_2.vhd(16): object "a3b0" assigned a value but never read File: /home/sofigazolla/ecl/multipliers/multiplier_operator_axc_2.vhd Line: 16
+Warning (10036): Verilog HDL or VHDL warning at multiplier_operator_axc_2.vhd(17): object "a0b1" assigned a value but never read File: /home/sofigazolla/ecl/multipliers/multiplier_operator_axc_2.vhd Line: 17
+Warning (10036): Verilog HDL or VHDL warning at multiplier_operator_axc_2.vhd(17): object "a1b1" assigned a value but never read File: /home/sofigazolla/ecl/multipliers/multiplier_operator_axc_2.vhd Line: 17
+Warning (10036): Verilog HDL or VHDL warning at multiplier_operator_axc_2.vhd(17): object "a2b1" assigned a value but never read File: /home/sofigazolla/ecl/multipliers/multiplier_operator_axc_2.vhd Line: 17
+Warning (10036): Verilog HDL or VHDL warning at multiplier_operator_axc_2.vhd(18): object "a0b2" assigned a value but never read File: /home/sofigazolla/ecl/multipliers/multiplier_operator_axc_2.vhd Line: 18
+Warning (10036): Verilog HDL or VHDL warning at multiplier_operator_axc_2.vhd(18): object "a1b2" assigned a value but never read File: /home/sofigazolla/ecl/multipliers/multiplier_operator_axc_2.vhd Line: 18
+Warning (10036): Verilog HDL or VHDL warning at multiplier_operator_axc_2.vhd(19): object "a0b3" assigned a value but never read File: /home/sofigazolla/ecl/multipliers/multiplier_operator_axc_2.vhd Line: 19
+Info (12129): Elaborating entity "half_adder" using architecture "A:rtl" for hierarchy "half_adder:HA40" File: /home/sofigazolla/ecl/multipliers/multiplier_operator_axc_2.vhd Line: 122
+Info (12129): Elaborating entity "axc_2" using architecture "A:rtl" for hierarchy "axc_2:AXC50" File: /home/sofigazolla/ecl/multipliers/multiplier_operator_axc_2.vhd Line: 131
+Info (12129): Elaborating entity "exact_compressor" using architecture "A:rtl" for hierarchy "exact_compressor:EXACT73" File: /home/sofigazolla/ecl/multipliers/multiplier_operator_axc_2.vhd Line: 149
+Info (12129): Elaborating entity "fa_practice" using architecture "A:rtl" for hierarchy "fa_practice:FA35" File: /home/sofigazolla/ecl/multipliers/multiplier_operator_axc_2.vhd Line: 152
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "product[0]" is stuck at GND File: /home/sofigazolla/ecl/multipliers/multiplier_operator_axc_2.vhd Line: 9
+    Warning (13410): Pin "product[1]" is stuck at VCC File: /home/sofigazolla/ecl/multipliers/multiplier_operator_axc_2.vhd Line: 9
+    Warning (13410): Pin "product[2]" is stuck at VCC File: /home/sofigazolla/ecl/multipliers/multiplier_operator_axc_2.vhd Line: 9
+    Warning (13410): Pin "product[3]" is stuck at GND File: /home/sofigazolla/ecl/multipliers/multiplier_operator_axc_2.vhd Line: 9
+    Warning (13410): Pin "product[4]" is stuck at VCC File: /home/sofigazolla/ecl/multipliers/multiplier_operator_axc_2.vhd Line: 9
+    Warning (13410): Pin "product[7]" is stuck at VCC File: /home/sofigazolla/ecl/multipliers/multiplier_operator_axc_2.vhd Line: 9
+    Warning (13410): Pin "product[8]" is stuck at VCC File: /home/sofigazolla/ecl/multipliers/multiplier_operator_axc_2.vhd Line: 9
+    Warning (13410): Pin "product[9]" is stuck at VCC File: /home/sofigazolla/ecl/multipliers/multiplier_operator_axc_2.vhd Line: 9
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "a[0]" File: /home/sofigazolla/ecl/multipliers/multiplier_operator_axc_2.vhd Line: 7
+    Warning (15610): No output dependent on input pin "a[1]" File: /home/sofigazolla/ecl/multipliers/multiplier_operator_axc_2.vhd Line: 7
+Info (21057): Implemented 73 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 16 input pins
+    Info (21059): Implemented 16 output pins
+    Info (21061): Implemented 41 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 23 warnings
+    Info: Peak virtual memory: 483 megabytes
+    Info: Processing ended: Fri Oct 23 12:05:18 2026
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:14
+
+
